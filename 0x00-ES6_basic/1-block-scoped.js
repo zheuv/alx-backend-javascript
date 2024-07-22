@@ -4,8 +4,8 @@ export default function taskBlock(trueOrFalse) {
 
   if (trueOrFalse) {
     (function() {
-      var task = true; // This task is scoped to the IIFE
-      var task2 = false; // This task2 is scoped to the IIFE
+      var task = true;
+      var task2 = false;
     })();
   }
 
