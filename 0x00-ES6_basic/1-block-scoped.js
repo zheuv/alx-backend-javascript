@@ -1,11 +1,14 @@
 export default function taskBlock(trueOrFalse) {
-  const task = false;
-  const task2 = true;
+  var task = false;
+  var task2 = true;
 
   if (trueOrFalse) {
-    const task = true;
-    const task2 = false;
+    (function() {
+      var task = true; // This task is scoped to the IIFE
+      var task2 = false; // This task2 is scoped to the IIFE
+    })();
   }
 
   return [task, task2];
 }
+
