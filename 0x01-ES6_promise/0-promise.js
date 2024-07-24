@@ -4,7 +4,7 @@ export default function getResponseFromAPI() {
 			const success = true;
 			if (success) {
 				resolve("success");
-			}	else {
+			} else {
 				reject("failure");
 			}
 		}, 1000);
