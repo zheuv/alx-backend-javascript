@@ -1,12 +1,13 @@
 {
   "name": "node_js_basics",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Node.js project with basic HTTP server and file handling functionalities.",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint",
-    "check-lint": "lint [0-9]*.js",
-    "test": "./node_modules/mocha/bin/mocha --require babel-register --exit",
+    "lint": "eslint",
+    "check-lint": "npm run lint -- [0-9]*.js",
+    "test": "mocha --require babel-register --exit",
+    "full-test": "npm run lint && npm test",  // Run linting and tests
     "dev": "nodemon --exec babel-node --presets babel-preset-env ./server.js ./database.csv"
   },
   "author": "",
